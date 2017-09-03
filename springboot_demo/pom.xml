@@ -6,7 +6,7 @@
 	<groupId>com.barehacks</groupId>
 	<artifactId>springboot_demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>springboot_demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -51,6 +51,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration><executable>true</executable></configuration>
 			</plugin>
 		</plugins>
 	</build>

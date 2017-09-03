@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>${home}</title>
+<title>${about}</title>
 </head>
 <body>
-<h1>Hello World of Spring Boot from JSP!</h1>
+<h1>About us.</h1>
+
 </body>
 </html>

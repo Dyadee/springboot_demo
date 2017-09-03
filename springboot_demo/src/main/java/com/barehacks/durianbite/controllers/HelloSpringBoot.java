@@ -1,34 +1,32 @@
 package com.barehacks.durianbite.controllers;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
-//public class HelloSpringBoot {
-//	@RequestMapping("/")
-//	public String home(Model model){
-//		return "home";
-//	}
-//
-//}
 
+/*
+ * @return View "home"
+ * */
 @Controller
+@EnableAutoConfiguration
 public class HelloSpringBoot {
-	@RequestMapping("/")
+	
+	private String homeTitle = "My First Spring Boot App";
+	private String aboutTitle = "About Us";
+	
+	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(Model model){
+		model.addAttribute("home", homeTitle);
 		return "home";
+	}
+	@RequestMapping(value="/about", method=RequestMethod.GET)
+	public String about(Model model){
+		model.addAttribute("about", aboutTitle);
+		return "about";
 	}
 
 }
-//@Controller
-//public class HelloSpringBoot {
-//
-//   @RequestMapping("/")
-//   public String handler (Model model) {
-//       model.addAttribute("msg",
-//                          "a jar packaging example");
-//       return "myView";
-//   }
-//}
